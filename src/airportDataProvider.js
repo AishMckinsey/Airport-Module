@@ -1,6 +1,6 @@
 const allAirportData = require('../data/airports.json');
 
-const airportData = (airportCode) => {
+const airportDataProvider = (airportCode) => {
 
     if(typeof(airportCode) !== 'string'  || airportCode.length !== 3){
         return 'Invalid Data Entered';
@@ -21,4 +21,6 @@ const airportData = (airportCode) => {
 
 };
 
-console.log(airportData('AAA'));
+module.exports = {
+    airportDataProvider
+};
